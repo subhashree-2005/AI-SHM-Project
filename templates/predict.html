@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>AI Prediction</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            text-align:center;
+            margin-top:100px;
+            background:#111;
+            color:white;
+        }
+
+        input{
+            padding:10px;
+            margin:10px;
+            width:200px;
+        }
+
+        button{
+            padding:10px 20px;
+            background:cyan;
+            border:none;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        .box{
+            background:#222;
+            width:400px;
+            margin:auto;
+            padding:30px;
+            border-radius:10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1>AI Damage Prediction</h1>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <input type="number"
+               step="0.01"
+               name="frequency"
+               placeholder="Enter Frequency">
+
+        <br>
+
+        <input type="number"
+               step="0.01"
+               name="rms"
+               placeholder="Enter RMS">
+
+        <br><br>
+
+        <button type="submit">
+
+            Predict
+
+        </button>
+
+    </form>
+
+    {% if result %}
+
+    <h2>
+
+        Structure Status:
+        {{ result }}
+
+    </h2>
+
+    {% endif %}
+
+</div>
+
+</body>
+
+</html>

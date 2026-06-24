@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Projects</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/projects/">Projects</a>
+        <a href="/dashboard/">Dashboard</a>
+        <a href="/contact/">Contact</a>
+    </nav>
+
+    <h1>My Projects</h1>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h2>AI Structural Health Monitoring System</h2>
+
+            <p>
+                Detecting structural damage in steel structures
+                using vibration analysis, sensors,
+                FFT signal processing, machine learning,
+                and Django dashboard monitoring.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Machine Learning Damage Detection</h2>
+
+            <p>
+                Training Random Forest, KNN, SVR,
+                and MLP models using vibration datasets
+                generated from damaged and undamaged structures.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>IoT Sensor Monitoring</h2>
+
+            <p>
+                Using MPU6050 and Arduino
+                for real-time vibration data collection
+                and live monitoring.
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
